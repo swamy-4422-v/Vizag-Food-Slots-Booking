@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Prevent layout shift on scrollbar appearing */
+    scrollbar-gutter: stable;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased;
+    /* High-end typography pairing */
+    font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+  }
+
+  /* --- MODERN SCROLLBAR --- */
+  ::-webkit-scrollbar {
+    @apply w-[6px];
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-300 rounded-full hover:bg-orange-600 transition-all duration-300;
+  }
+}
+
+@layer components {
+  /* --- MAP FIXES --- */
+  .leaflet-container {
+    @apply w-full h-full z-0;
+    border-radius: inherit;
+    /* Fix for high-density screens */
+    font-family: inherit !important;
+  }
+
+  /* Ensure map controls stay below Navbars but above the map */
+  .leaflet-control-container .leaflet-top,
+  .leaflet-control-container .leaflet-bottom {
+    @apply z-[5];
+  }
+
+  /* --- UTILITIES --- */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  /* --- ANIMATIONS --- */
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    75% { transform: translateX(4px); }
+  }
+
+  .animate-shake {
+    animation: shake 0.4s cubic-bezier(.36,.07,.19,.97) both;
+  }
+
+  .fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
+
+/* Fix for mobile Safari height issues (100vh fix) */
+.min-h-screen-ios {
+  min-height: -webkit-fill-available;
+}
