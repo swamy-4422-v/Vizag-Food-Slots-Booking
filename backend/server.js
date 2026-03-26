@@ -44,8 +44,6 @@ const corsOptions = {
     // Allowed origins list
     const allowedOrigins = [
       FRONTEND_URL,
-      'http://localhost:3000',
-      'http://localhost:4000',
       'https://vizag-food-slots-booking.onrender.com',
       // Add your frontend Render URL here when deployed
     ];
