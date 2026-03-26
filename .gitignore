@@ -107,8 +107,6 @@ temp/
 # Nuxt.js build output
 .nuxt
 
-# Gatsby build output
-public/
 
 # vuepress build output
 .vuepress/dist
