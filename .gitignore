@@ -154,7 +154,7 @@ docker-compose.override.yml
 
 # Uploads (if your app handles file uploads)
 uploads/
-public/uploads/
+
 backend/uploads/
 
 # Python virtual environment (if any)
