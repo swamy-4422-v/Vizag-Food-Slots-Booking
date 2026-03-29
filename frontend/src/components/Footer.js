@@ -61,10 +61,10 @@ const Footer = () => {
           {/* Contact */}
           <div>
             <h4 className="font-black uppercase tracking-widest text-xs text-orange-500 mb-6">Support</h4>
-            <a href="mailto:hello@vizagslots.in" className="block text-sm font-bold text-gray-300 mb-2 hover:text-orange-500 transition-colors">
+            <a href="mailto:vizagslots@gmail.com" className="block text-sm font-bold text-gray-300 mb-2 hover:text-orange-500 transition-colors">
               hello@vizagslots.in
             </a>
-            <p className="text-sm font-bold text-gray-300">+91 891 234 5678</p>
+            <p className="text-sm font-bold text-gray-300">+91 766 093 692</p>
             <p className="text-xs text-gray-500 mt-4 leading-relaxed">
               Vizag Tech Park, <br />
               Rushikonda, Visakhapatnam, <br />
